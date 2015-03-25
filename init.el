@@ -1,3 +1,6 @@
+(setq x-super-keysym 'alt
+      x-alt-keysym   'super)
+
 (defconst emacs-start-time (current-time))
 (unless noninteractive
   (message "Loading %s..." load-file-name))
