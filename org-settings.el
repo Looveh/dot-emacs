@@ -93,9 +93,7 @@
        (org-agenda-ndays 14))))))
  '(org-agenda-deadline-leaders (quote ("!D!: " "D%02d: ")))
  '(org-agenda-default-appointment-duration 60)
- '(org-agenda-files
-   (quote
-    ("~/Documents/todo.txt" "~/Documents/habits.txt" "~/Documents/OSS.txt" "~/Documents/BAE.txt" "~/Documents/assembly.txt" "~/Documents/IL-05/IL-05.txt")))
+ '(org-agenda-files (quote ("~/doc/insight.org")))
  '(org-agenda-fontify-priorities t)
  '(org-agenda-include-diary t)
  '(org-agenda-inhibit-startup t)
@@ -124,7 +122,7 @@
      (search category-keep))))
  '(org-agenda-start-on-weekday nil)
  '(org-agenda-start-with-log-mode nil)
- '(org-agenda-tags-column -100)
+ '(org-agenda-tags-column -97)
  '(org-agenda-text-search-extra-files (quote (agenda-archives)))
  '(org-agenda-use-time-grid nil)
  '(org-archive-location "TODO-archive::")
@@ -140,27 +138,20 @@
  '(org-capture-templates
    (quote
     (("a" "Add Task" entry
-      (file+headline "~/Documents/todo.txt" "Inbox")
+      (file+headline "~/Documents/insight.org" "Inbox")
       "* TODO %?
 SCHEDULED: %t
 :PROPERTIES:
 :ID:       %(shell-command-to-string \"uuidgen\"):CREATED:  %U
 :END:" :prepend t)
      ("n" "Note" entry
-      (file "~/Documents/notes.txt")
+      (file "~/Documents/insight.org")
       "* NOTE %?
 :PROPERTIES:
 :ID:       %(shell-command-to-string \"uuidgen\"):CREATED:  %U
 :END:" :prepend t)
-     ("c" "Calendar" entry
-      (file+headline "~/Documents/todo.txt" "Inbox")
-      "* APPT %?
-SCHEDULED: %t
-:PROPERTIES:
-:ID:       %(shell-command-to-string \"uuidgen\"):CREATED:  %U
-:END:" :prepend t)
      ("t" "Add Task" entry
-      (file+headline "~/Documents/todo.txt" "Inbox")
+      (file+headline "~/Documents/insight.org" "Inbox")
       "* TODO %?
 SCHEDULED: %t
 :PROPERTIES:
@@ -262,11 +253,8 @@ SCHEDULED: %t
   (67 :foreground "dark gray" :slant italic))))
  '(org-refile-targets
 (quote
- (("~/Documents/todo.txt" :level . 1)
-  ("~/Documents/OSS.txt" :level . 1)
-  ("~/Documents/BAE.txt" :level . 1)
-  ("~/Documents/assembly.txt" :level . 1)
-  (org-agenda-files :todo . "PROJECT"))))
+ ((org-agenda-files :todo . "PROJECT")
+  ("~/doc/insight.org" :level . 1))))
  '(org-return-follows-link t)
  '(org-reverse-note-order t)
  '(org-src-fontify-natively t)
