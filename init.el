@@ -37,8 +37,8 @@
 ;;; Utility macros and functions
 
 ;; support textexpander (jww (2015-03-24): check if it's running)
-(bind-key "A-v" 'scroll-down)
-(bind-key "M-v" 'yank)
+;;(bind-key "A-v" 'scroll-down)
+;;(bind-key "M-v" 'yank)
 
 (defsubst hook-into-modes (func &rest modes)
   (dolist (mode-hook modes) (add-hook mode-hook func)))
