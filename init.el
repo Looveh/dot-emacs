@@ -731,6 +731,7 @@ Inspired by Erik Naggum's `recursive-edit-with-single-window'."
     (hs-minor-mode 1)
     (hide-ifdef-mode 1)
     ;; (whitespace-mode 1)
+    (set-fill-column 90)
     (which-function-mode 1)
     (company-mode 1)
     (bug-reference-prog-mode 1)
